@@ -1,0 +1,136 @@
+.app {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__total {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    min-width: 400px;
+    &_heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.5px solid gray;
+      span {
+        font-weight: bold;
+      }
+    }
+    &_content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 100px;
+      &_item {
+        flex: 1;
+        text-align: center;
+        padding-top: 15px;
+        padding-right: 20px;
+        font-weight: bold;
+      }
+      .income {
+        border-right: 1px solid #ccc;
+        span {
+          color: darkgreen;
+        }
+      }
+      .expenses {
+        display: flex;
+        flex-direction: column;
+        span {
+          color: tomato;
+        }
+      }
+    }
+  }
+  &__history_expenses {
+    text-align: center;
+    .history__list {
+      &-item {
+        border-left: 5px solid darkgreen;
+        border-right: 5px solid darkgreen;
+        background-color: #fff;
+        border-radius: 10px;
+        color: #333;
+        padding: 10px;
+        margin-top: 30px;
+        line-height: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child {
+          margin-top: 5px;
+        }
+        &_delete {
+          color: red;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  &__create_item,
+  &__create_income {
+    margin-top: 40px;
+    background-color: #ddd;
+    border-radius: 25px;
+    padding: 15px 15px;
+    h3 {
+      text-align: center;
+    }
+    form {
+      input {
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 5px 0;
+        font-size: 16px;
+        width: 100%;
+        outline: transparent;
+      }
+      button {
+        background-color: darkorange;
+        border-width: 2px;
+        border-style: solid;
+        border-color: darkorange;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 20px 0;
+        width: 100%;
+        margin: 15px 0;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: darkorange;
+        }
+      }
+    }
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

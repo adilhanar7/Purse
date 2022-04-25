@@ -1,0 +1,149 @@
+.app main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__total {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  min-width: 400px;
+}
+
+.app__total_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid gray;
+}
+
+.app__total_heading span {
+  font-weight: bold;
+}
+
+.app__total_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+.app__total_content_item {
+  flex: 1;
+  text-align: center;
+  padding-top: 15px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.app__total_content .income {
+  border-right: 1px solid #ccc;
+}
+
+.app__total_content .income span {
+  color: darkgreen;
+}
+
+.app__total_content .expenses {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__total_content .expenses span {
+  color: tomato;
+}
+
+.app__history_expenses {
+  text-align: center;
+}
+
+.app__history_expenses .history__list-item {
+  border-left: 5px solid darkgreen;
+  border-right: 5px solid darkgreen;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #333;
+  padding: 10px;
+  margin-top: 30px;
+  line-height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app__history_expenses .history__list-item:first-child {
+  margin-top: 5px;
+}
+
+.app__history_expenses .history__list-item_delete {
+  color: red;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.app__create_item, .app__create_income {
+  margin-top: 40px;
+  background-color: #ddd;
+  border-radius: 25px;
+  padding: 15px 15px;
+}
+
+.app__create_item h3, .app__create_income h3 {
+  text-align: center;
+}
+
+.app__create_item form input, .app__create_income form input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 5px 0;
+  font-size: 16px;
+  width: 100%;
+  outline: transparent;
+}
+
+.app__create_item form button, .app__create_income form button {
+  background-color: darkorange;
+  border-width: 2px;
+  border-style: solid;
+  border-color: darkorange;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 0;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.app__create_item form button:hover, .app__create_income form button:hover {
+  background-color: white;
+  color: darkorange;
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*# sourceMappingURL=index.css.map */
