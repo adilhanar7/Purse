@@ -14,24 +14,12 @@ let incomeSum = 0
 let expensesSum = 0
 let totalAmount = 0
 let listExpenses = []
-const generatorId = () => {
-  let resId = ''
-  let possible =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
-
-  for (var i = 0; i < 5; i++) {
-    resId += possible.charAt(Math.floor(Math.random() * possible.length))
-  }
-  return resId
-}
 
 submitFormOperation.localItem_name.addEventListener('input', (event) => {
-  // createItemName.push(event.data)
   event.target.style.border = ''
   createItemName = event.target.value
 })
 submitFormOperation.localItem_sum.addEventListener('input', (event) => {
-  // createItemSum.push(event.data)
   event.target.style.border = ''
   createItemSum = event.target.value
 })
@@ -46,7 +34,7 @@ submitFormOperation.addEventListener('click', (event) => {
     if (createItemName !== '' && createItemSum !== 0) {
       if (localStorage.getItem('calc') !== null) {
         listExpenses.push({
-          id: generatorId(),
+          id: uuidv4(),
           name: createItemName,
           amount: createItemSum,
         })
@@ -56,7 +44,7 @@ submitFormOperation.addEventListener('click', (event) => {
           'calc',
           JSON.stringify([
             {
-              id: generatorId(),
+              id: uuidv4(),
               name: createItemName,
               amount: createItemSum,
             },
